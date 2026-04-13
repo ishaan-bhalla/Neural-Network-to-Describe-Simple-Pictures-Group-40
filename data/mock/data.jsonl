@@ -1,0 +1,4 @@
+{"id":"1","task":"shapes","image_path":"data/mock/images/img1.png","caption":"a large blue circle is above a small red square","split":"train"}
+{"id":"2","task":"shapes","image_path":"data/mock/images/img2.png","caption":"a small red square is below a large blue circle","split":"train"}
+{"id":"3","task":"shapes","image_path":"data/mock/images/img3.png","caption":"a large green triangle is left of a small yellow circle","split":"train"}
+{"id":"4","task":"shapes","image_path":"data/mock/images/img4.png","caption":"a small yellow circle is right of a large green triangle","split":"train"}
