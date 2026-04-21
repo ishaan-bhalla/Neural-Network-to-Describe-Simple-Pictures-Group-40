@@ -10,15 +10,20 @@ import torch.nn as nn
 import torch.optim as optim
 import json
 import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-from src.data.dataset import ImageCaptionDataset
+
+from src.data.simple_pipeline_dataset import ImageCaptionDataset
 from src.models.simple_cnn import SimpleCNN
 
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(PROJECT_ROOT))
+DATA_PATH = PROJECT_ROOT / "data" / "processed" / "mock" / "metadata" / "data.jsonl"
+ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 def train():
     # loading data
-    dataset = ImageCaptionDataset("data/mock/data.jsonl")
+    dataset = ImageCaptionDataset(str(DATA_PATH))
     loader = DataLoader(dataset, batch_size=4, shuffle=True)
     print("Dataset size:", len(dataset))
     print("Num classes:", len(dataset.label_map))
@@ -28,6 +33,7 @@ def train():
     loss_fn = nn.CrossEntropyLoss()
 
     for epoch in range(50):
+        model.train()
         total_loss = 0.0
         correct = 0
         total = 0
@@ -54,8 +60,10 @@ def train():
         print(f"Accuracy: {accuracy:.2f}")
 
     # Save model
-    os.makedirs("artifacts", exist_ok=True)
-    torch.save(model.state_dict(), "artifacts/model.pth")
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+    torch.save(model.state_dict(), ARTIFACTS_DIR / "model.pth")
+    with open(ARTIFACTS_DIR / "label_map.json", "w", encoding="utf-8") as f:
+        json.dump(dataset.label_map, f, ensure_ascii=False, indent=2)
     # Save label map
     with open("artifacts/label_map.json", "w") as f:
         json.dump(dataset.label_map, f)
