@@ -3,7 +3,6 @@
 
 # generated datasets and previews
 data/processed/
-data/previews/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
