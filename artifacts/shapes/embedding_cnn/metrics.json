@@ -6,7 +6,7 @@
   "image_size": 64,
   "batch_size": 32,
   "lr": 0.001,
-  "epochs": 15,
+  "epochs": 50,
   "seed": 42,
   "embedding_dim": 384,
   "num_unique_captions": 800,
@@ -118,6 +118,251 @@
       "train_sentence_accuracy": 0.3825,
       "val_loss": 9.182617766782641e-05,
       "val_sentence_accuracy": 0.46
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.00014436178840696812,
+      "train_sentence_accuracy": 0.3625,
+      "val_loss": 9.721915936097502e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.00013817825238220393,
+      "train_sentence_accuracy": 0.40125,
+      "val_loss": 9.404276497662067e-05,
+      "val_sentence_accuracy": 0.38
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.00013415645429631695,
+      "train_sentence_accuracy": 0.42375,
+      "val_loss": 8.406696986639872e-05,
+      "val_sentence_accuracy": 0.46
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.00013058161828666926,
+      "train_sentence_accuracy": 0.415,
+      "val_loss": 8.395253593334928e-05,
+      "val_sentence_accuracy": 0.46
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.00012943266308866442,
+      "train_sentence_accuracy": 0.39375,
+      "val_loss": 8.53969040326774e-05,
+      "val_sentence_accuracy": 0.36
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.00012842604657635094,
+      "train_sentence_accuracy": 0.4075,
+      "val_loss": 8.378005615668371e-05,
+      "val_sentence_accuracy": 0.39
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.00012397591955959797,
+      "train_sentence_accuracy": 0.41375,
+      "val_loss": 8.463764475891367e-05,
+      "val_sentence_accuracy": 0.36
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.00011907863547094166,
+      "train_sentence_accuracy": 0.4275,
+      "val_loss": 8.022311929380522e-05,
+      "val_sentence_accuracy": 0.39
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.00011776360712246969,
+      "train_sentence_accuracy": 0.43375,
+      "val_loss": 8.142721868352965e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.00011764304712414741,
+      "train_sentence_accuracy": 0.4475,
+      "val_loss": 7.703832554398104e-05,
+      "val_sentence_accuracy": 0.4
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.00011568774149054661,
+      "train_sentence_accuracy": 0.41875,
+      "val_loss": 7.527146051870659e-05,
+      "val_sentence_accuracy": 0.44
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.00011311168898828328,
+      "train_sentence_accuracy": 0.42,
+      "val_loss": 7.487230788683519e-05,
+      "val_sentence_accuracy": 0.38
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.00011065986211178825,
+      "train_sentence_accuracy": 0.43625,
+      "val_loss": 7.523306325310842e-05,
+      "val_sentence_accuracy": 0.46
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.00010946402588160709,
+      "train_sentence_accuracy": 0.42875,
+      "val_loss": 7.321495504584164e-05,
+      "val_sentence_accuracy": 0.43
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.00011041610327083617,
+      "train_sentence_accuracy": 0.4375,
+      "val_loss": 7.460607797838747e-05,
+      "val_sentence_accuracy": 0.39
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.00010864773648791015,
+      "train_sentence_accuracy": 0.46125,
+      "val_loss": 7.316000934224575e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.00010505163751076906,
+      "train_sentence_accuracy": 0.44375,
+      "val_loss": 7.256924378452823e-05,
+      "val_sentence_accuracy": 0.45
+    },
+    {
+      "epoch": 33,
+      "train_loss": 0.00010369101248215884,
+      "train_sentence_accuracy": 0.4325,
+      "val_loss": 7.490770105505362e-05,
+      "val_sentence_accuracy": 0.36
+    },
+    {
+      "epoch": 34,
+      "train_loss": 0.00010534800589084625,
+      "train_sentence_accuracy": 0.4575,
+      "val_loss": 6.969088164623827e-05,
+      "val_sentence_accuracy": 0.44
+    },
+    {
+      "epoch": 35,
+      "train_loss": 0.00010363735462306068,
+      "train_sentence_accuracy": 0.4625,
+      "val_loss": 7.038980460492894e-05,
+      "val_sentence_accuracy": 0.43
+    },
+    {
+      "epoch": 36,
+      "train_loss": 9.977603127481416e-05,
+      "train_sentence_accuracy": 0.47125,
+      "val_loss": 6.949301896383986e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 37,
+      "train_loss": 0.00010155469557503238,
+      "train_sentence_accuracy": 0.45125,
+      "val_loss": 7.045688136713579e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 38,
+      "train_loss": 0.00010055243386887013,
+      "train_sentence_accuracy": 0.47,
+      "val_loss": 6.724373117322102e-05,
+      "val_sentence_accuracy": 0.45
+    },
+    {
+      "epoch": 39,
+      "train_loss": 9.944485209416598e-05,
+      "train_sentence_accuracy": 0.45125,
+      "val_loss": 6.7665675887838e-05,
+      "val_sentence_accuracy": 0.4
+    },
+    {
+      "epoch": 40,
+      "train_loss": 9.863849525572732e-05,
+      "train_sentence_accuracy": 0.46,
+      "val_loss": 6.728136300807818e-05,
+      "val_sentence_accuracy": 0.43
+    },
+    {
+      "epoch": 41,
+      "train_loss": 9.599638840882108e-05,
+      "train_sentence_accuracy": 0.48375,
+      "val_loss": 6.802784715546294e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 42,
+      "train_loss": 9.49737906921655e-05,
+      "train_sentence_accuracy": 0.495,
+      "val_loss": 6.86525640776381e-05,
+      "val_sentence_accuracy": 0.4
+    },
+    {
+      "epoch": 43,
+      "train_loss": 9.384509321535006e-05,
+      "train_sentence_accuracy": 0.49125,
+      "val_loss": 6.531979393912479e-05,
+      "val_sentence_accuracy": 0.43
+    },
+    {
+      "epoch": 44,
+      "train_loss": 9.33664114563726e-05,
+      "train_sentence_accuracy": 0.4975,
+      "val_loss": 6.75277633126825e-05,
+      "val_sentence_accuracy": 0.41
+    },
+    {
+      "epoch": 45,
+      "train_loss": 9.530042822007089e-05,
+      "train_sentence_accuracy": 0.45875,
+      "val_loss": 6.476324633695186e-05,
+      "val_sentence_accuracy": 0.4
+    },
+    {
+      "epoch": 46,
+      "train_loss": 9.395075088832528e-05,
+      "train_sentence_accuracy": 0.47125,
+      "val_loss": 6.350805546389892e-05,
+      "val_sentence_accuracy": 0.43
+    },
+    {
+      "epoch": 47,
+      "train_loss": 9.42211807705462e-05,
+      "train_sentence_accuracy": 0.44875,
+      "val_loss": 6.60953568876721e-05,
+      "val_sentence_accuracy": 0.44
+    },
+    {
+      "epoch": 48,
+      "train_loss": 9.232896816683933e-05,
+      "train_sentence_accuracy": 0.4875,
+      "val_loss": 6.953187548788264e-05,
+      "val_sentence_accuracy": 0.38
+    },
+    {
+      "epoch": 49,
+      "train_loss": 9.442885464522988e-05,
+      "train_sentence_accuracy": 0.48,
+      "val_loss": 6.768665130948648e-05,
+      "val_sentence_accuracy": 0.42
+    },
+    {
+      "epoch": 50,
+      "train_loss": 9.128849866101519e-05,
+      "train_sentence_accuracy": 0.47,
+      "val_loss": 6.56066561350599e-05,
+      "val_sentence_accuracy": 0.4
     }
   ]
 }

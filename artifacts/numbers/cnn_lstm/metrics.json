@@ -1,5 +1,5 @@
 {
-  "avg_loss": 1.7255544662475586,
-  "approx_token_prob": 0.17807428821252647,
-  "token_accuracy": 0.546
+  "avg_loss": 2.045691877603531,
+  "approx_token_prob": 0.12929070568124498,
+  "token_accuracy": 0.56
 }

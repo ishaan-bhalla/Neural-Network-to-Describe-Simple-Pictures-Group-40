@@ -20,7 +20,7 @@
   {
     "id": "numbers_test_000004",
     "true_caption": "a large red 7",
-    "pred_caption": "a small red 8",
+    "pred_caption": "a small red 7",
     "exact_match": false
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "numbers_test_000011",
     "true_caption": "a small yellow 773",
-    "pred_caption": "a small yellow 559",
+    "pred_caption": "a small yellow 8973",
     "exact_match": false
   },
   {
@@ -86,8 +86,8 @@
   {
     "id": "numbers_test_000015",
     "true_caption": "a large green 2",
-    "pred_caption": "a large green 4",
-    "exact_match": false
+    "pred_caption": "a large green 2",
+    "exact_match": true
   },
   {
     "id": "numbers_test_000016",
@@ -110,13 +110,13 @@
   {
     "id": "numbers_test_000019",
     "true_caption": "a large red 7",
-    "pred_caption": "a small red 8",
+    "pred_caption": "a small red 7",
     "exact_match": false
   },
   {
     "id": "numbers_test_000020",
     "true_caption": "a large blue 828",
-    "pred_caption": "a small blue 6539",
+    "pred_caption": "a small blue 649",
     "exact_match": false
   },
   {
@@ -140,7 +140,7 @@
   {
     "id": "numbers_test_000024",
     "true_caption": "a small yellow 1",
-    "pred_caption": "a small yellow 8",
+    "pred_caption": "a small yellow 7",
     "exact_match": false
   },
   {
@@ -158,7 +158,7 @@
   {
     "id": "numbers_test_000027",
     "true_caption": "a large green 61",
-    "pred_caption": "a small green 6491",
+    "pred_caption": "a large green 47",
     "exact_match": false
   },
   {
@@ -194,7 +194,7 @@
   {
     "id": "numbers_test_000033",
     "true_caption": "a large green 85",
-    "pred_caption": "a small green 6491",
+    "pred_caption": "a small green 84",
     "exact_match": false
   },
   {
@@ -206,7 +206,7 @@
   {
     "id": "numbers_test_000035",
     "true_caption": "a small yellow 94",
-    "pred_caption": "a small yellow 63",
+    "pred_caption": "a large yellow 57",
     "exact_match": false
   },
   {
@@ -224,7 +224,7 @@
   {
     "id": "numbers_test_000038",
     "true_caption": "a large yellow 3167",
-    "pred_caption": "a large yellow 5581",
+    "pred_caption": "a small yellow 8973",
     "exact_match": false
   },
   {
@@ -248,7 +248,7 @@
   {
     "id": "numbers_test_000042",
     "true_caption": "a large yellow 1",
-    "pred_caption": "a small yellow 8",
+    "pred_caption": "a small yellow 7",
     "exact_match": false
   },
   {
@@ -272,7 +272,7 @@
   {
     "id": "numbers_test_000046",
     "true_caption": "a large blue 89",
-    "pred_caption": "a small blue 6539",
+    "pred_caption": "a small blue 649",
     "exact_match": false
   },
   {
@@ -284,7 +284,7 @@
   {
     "id": "numbers_test_000048",
     "true_caption": "a small red 25",
-    "pred_caption": "a small red 7118",
+    "pred_caption": "a small red 56",
     "exact_match": false
   },
   {
@@ -302,7 +302,7 @@
   {
     "id": "numbers_test_000051",
     "true_caption": "a small blue 838",
-    "pred_caption": "a small blue 6539",
+    "pred_caption": "a small blue 649",
     "exact_match": false
   },
   {
@@ -326,8 +326,8 @@
   {
     "id": "numbers_test_000055",
     "true_caption": "a large yellow 4",
-    "pred_caption": "a small yellow 8",
-    "exact_match": false
+    "pred_caption": "a large yellow 4",
+    "exact_match": true
   },
   {
     "id": "numbers_test_000056",
@@ -350,13 +350,13 @@
   {
     "id": "numbers_test_000059",
     "true_caption": "a large blue 17",
-    "pred_caption": "a large blue 4",
+    "pred_caption": "a small blue 6539",
     "exact_match": false
   },
   {
     "id": "numbers_test_000060",
     "true_caption": "a large green 40",
-    "pred_caption": "a small green 6491",
+    "pred_caption": "a large green 47",
     "exact_match": false
   },
   {
@@ -380,7 +380,7 @@
   {
     "id": "numbers_test_000064",
     "true_caption": "a small green 172",
-    "pred_caption": "a small green 6491",
+    "pred_caption": "a small green 735",
     "exact_match": false
   },
   {
@@ -512,7 +512,7 @@
   {
     "id": "numbers_test_000086",
     "true_caption": "a large green 32",
-    "pred_caption": "a small green 6491",
+    "pred_caption": "a large green 47",
     "exact_match": false
   },
   {
@@ -530,19 +530,19 @@
   {
     "id": "numbers_test_000089",
     "true_caption": "a large red 23",
-    "pred_caption": "a small red 7118",
+    "pred_caption": "a small red 65",
     "exact_match": false
   },
   {
     "id": "numbers_test_000090",
     "true_caption": "a large red 44",
-    "pred_caption": "a small red 9464",
+    "pred_caption": "a large red 41",
     "exact_match": false
   },
   {
     "id": "numbers_test_000091",
     "true_caption": "a small yellow 183",
-    "pred_caption": "a small yellow 559",
+    "pred_caption": "a large yellow 63",
     "exact_match": false
   },
   {
@@ -554,7 +554,7 @@
   {
     "id": "numbers_test_000093",
     "true_caption": "a small yellow 24",
-    "pred_caption": "a small yellow 63",
+    "pred_caption": "a large yellow 57",
     "exact_match": false
   },
   {
@@ -590,7 +590,7 @@
   {
     "id": "numbers_test_000099",
     "true_caption": "a small red 40",
-    "pred_caption": "a small red 7118",
+    "pred_caption": "a small red 56",
     "exact_match": false
   },
   {
