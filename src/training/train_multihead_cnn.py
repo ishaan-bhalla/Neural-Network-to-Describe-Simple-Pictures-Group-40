@@ -213,7 +213,7 @@ def train(args):
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     loss_fn = nn.CrossEntropyLoss()
 
-    artifacts_dir = project_root / "artifacts" / args.dataset / "structured_cnn"
+    artifacts_dir = project_root / "artifacts" / args.dataset / "multihead_cnn"
     artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     best_val_acc = -1.0
@@ -286,7 +286,7 @@ def train(args):
 
     metrics = {
         "dataset": args.dataset,
-        "model": "structured_cnn",
+        "model": "multihead_cnn",
         "metadata_source": info["source"],
         "epochs": args.epochs,
         "batch_size": args.batch_size,
