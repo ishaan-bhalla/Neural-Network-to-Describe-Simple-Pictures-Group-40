@@ -1,0 +1,512 @@
+[
+  {
+    "id": "tictactoe_test_000001",
+    "true_caption": "X is in middle left and bottom middle and bottom right; O is in top middle and bottom left",
+    "pred_caption": "X is in middle left and bottom middle and bottom right; O is in top middle and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "X",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000002",
+    "true_caption": "X is in top right and center and bottom right; O is in top left and top middle and middle right",
+    "pred_caption": "X is in center; O is in top left and top middle and middle right",
+    "exact_match": false,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "X",
+      "middle right": "O",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000003",
+    "true_caption": "X is in top right and center and middle right; O is in top middle and bottom left and bottom middle",
+    "pred_caption": "X is in top right and center and middle right; O is in top middle and bottom left and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "X",
+      "middle right": "X",
+      "bottom left": "O",
+      "bottom middle": "O",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000004",
+    "true_caption": "X is in top right and middle left and bottom middle; O is in top left and middle right and bottom left",
+    "pred_caption": "X is in top right and middle left and bottom middle; O is in top left and middle right and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "empty",
+      "top right": "X",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "O",
+      "bottom left": "O",
+      "bottom middle": "X",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000005",
+    "true_caption": "X is in top left and middle left; O is in bottom left and bottom middle",
+    "pred_caption": "X is in top left and middle left; O is in bottom left and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "O",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000006",
+    "true_caption": "X is in middle left and middle right and bottom right; O is in top middle and top right",
+    "pred_caption": "X is in middle left and middle right and bottom right; O is in top middle and top right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "O",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000007",
+    "true_caption": "X is in top right; O is in center",
+    "pred_caption": "X is in top right; O is in center",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "O",
+      "middle right": "empty",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000008",
+    "true_caption": "X is in top middle and middle right and bottom left; O is in top left and center",
+    "pred_caption": "X is in top middle and middle right and bottom left; O is in top left and center",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "X",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "O",
+      "middle right": "X",
+      "bottom left": "X",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000009",
+    "true_caption": "X is in center and bottom right; O is in middle left and bottom middle",
+    "pred_caption": "X is in center and bottom right; O is in middle left and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "O",
+      "center": "X",
+      "middle right": "empty",
+      "bottom left": "empty",
+      "bottom middle": "O",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000010",
+    "true_caption": "X is in middle left and bottom middle and bottom right; O is in top right and center and bottom left",
+    "pred_caption": "X is in middle left and bottom middle and bottom right; O is in top right and center and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "O",
+      "middle left": "X",
+      "center": "O",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "X",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000011",
+    "true_caption": "X is in middle right and bottom left; O is in top right and bottom middle",
+    "pred_caption": "X is in middle right and bottom left; O is in top right and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "O",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "X",
+      "bottom middle": "O",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000012",
+    "true_caption": "X is in middle right and bottom right; O is in center",
+    "pred_caption": "X is in middle right and bottom right; O is in center",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "O",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000013",
+    "true_caption": "X is in center and middle right and bottom left; O is in top left and top right and bottom middle",
+    "pred_caption": "X is in center and middle right and bottom left; O is in top left and top right and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "empty",
+      "top right": "O",
+      "middle left": "empty",
+      "center": "X",
+      "middle right": "X",
+      "bottom left": "X",
+      "bottom middle": "O",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000014",
+    "true_caption": "X is in bottom left; O is in top middle",
+    "pred_caption": "X is in bottom left; O is in top middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "X",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000015",
+    "true_caption": "X is in top right and bottom left and bottom middle; O is in top left and top middle",
+    "pred_caption": "X is in top right and bottom left and bottom middle; O is in top left and top middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "O",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "X",
+      "bottom middle": "X",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000016",
+    "true_caption": "X is in top middle and middle left and middle right; O is in center and bottom middle and bottom right",
+    "pred_caption": "X is in top middle and middle left and middle right; O is in center and bottom middle and bottom right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "X",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "O",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "O",
+      "bottom right": "O"
+    }
+  },
+  {
+    "id": "tictactoe_test_000017",
+    "true_caption": "X is in top middle; O is in middle right",
+    "pred_caption": "X is in top middle; O is in middle right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "X",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "O",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000018",
+    "true_caption": "X is in top left and middle right and bottom left; O is in middle left and bottom right",
+    "pred_caption": "X is in top left and middle right and bottom left; O is in middle left and bottom right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "O",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "X",
+      "bottom middle": "empty",
+      "bottom right": "O"
+    }
+  },
+  {
+    "id": "tictactoe_test_000019",
+    "true_caption": "X is in top left and bottom right; O is in bottom left",
+    "pred_caption": "X is in top left and bottom right; O is in bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "empty",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000020",
+    "true_caption": "X is in top left and top right; O is in bottom left",
+    "pred_caption": "X is in top left and top right; O is in bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "empty",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000021",
+    "true_caption": "X is in middle left and middle right and bottom right; O is in top left and top middle and top right",
+    "pred_caption": "X is in middle left and middle right and bottom right; O is in top left and top middle and top right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "O",
+      "top right": "O",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000022",
+    "true_caption": "X is in top left and top right; O is in middle right and bottom left",
+    "pred_caption": "X is in top left and top right; O is in middle right and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "empty",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "O",
+      "bottom left": "O",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000023",
+    "true_caption": "X is in bottom middle and bottom right; O is in top left",
+    "pred_caption": "X is in bottom middle and bottom right; O is in top left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "empty",
+      "top right": "empty",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "empty",
+      "bottom middle": "X",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000024",
+    "true_caption": "X is in top left and top middle and bottom left; O is in top right and center and middle right",
+    "pred_caption": "X is in top left and top middle and bottom left; O is in top right and center and middle right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "X",
+      "top right": "O",
+      "middle left": "empty",
+      "center": "O",
+      "middle right": "O",
+      "bottom left": "X",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000025",
+    "true_caption": "X is in middle left and middle right; O is in top middle and bottom middle",
+    "pred_caption": "X is in middle left and middle right; O is in top middle and bottom middle",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "O",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000026",
+    "true_caption": "X is in middle left and center and bottom right; O is in top middle and middle right",
+    "pred_caption": "X is in middle left and center and bottom right; O is in top middle and middle right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "X",
+      "middle right": "O",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "X"
+    }
+  },
+  {
+    "id": "tictactoe_test_000027",
+    "true_caption": "X is in top left and middle left; O is in top middle and bottom left",
+    "pred_caption": "X is in top left and middle left; O is in top middle and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "X",
+      "top middle": "O",
+      "top right": "empty",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "empty",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000028",
+    "true_caption": "X is in top right and bottom middle; O is in top middle and bottom left",
+    "pred_caption": "X is in top right and bottom middle; O is in top middle and bottom left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "O",
+      "top right": "X",
+      "middle left": "empty",
+      "center": "empty",
+      "middle right": "empty",
+      "bottom left": "O",
+      "bottom middle": "X",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000029",
+    "true_caption": "X is in top right and middle right and bottom middle; O is in top left and top middle and middle left",
+    "pred_caption": "X is in top right and middle right and bottom middle; O is in top left and top middle and middle left",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "O",
+      "top middle": "O",
+      "top right": "X",
+      "middle left": "O",
+      "center": "empty",
+      "middle right": "X",
+      "bottom left": "empty",
+      "bottom middle": "X",
+      "bottom right": "empty"
+    }
+  },
+  {
+    "id": "tictactoe_test_000030",
+    "true_caption": "X is in top right and middle left; O is in middle right and bottom right",
+    "pred_caption": "X is in top right and middle left; O is in middle right and bottom right",
+    "exact_match": true,
+    "predicted_attributes": {
+      "top left": "empty",
+      "top middle": "empty",
+      "top right": "X",
+      "middle left": "X",
+      "center": "empty",
+      "middle right": "O",
+      "bottom left": "empty",
+      "bottom middle": "empty",
+      "bottom right": "O"
+    }
+  }
+]

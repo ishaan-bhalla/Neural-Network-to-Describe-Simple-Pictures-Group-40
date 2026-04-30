@@ -1,0 +1,780 @@
+{
+  "dataset": "numbers",
+  "model": "multihead_cnn",
+  "metadata_source": "/Users/ishaanbhalla/Developer/UNI/Neural-Network-to-Describe-Simple-Pictures-Group-40/data/processed/numbers/metadata/numbers_metadata.jsonl",
+  "epochs": 50,
+  "batch_size": 32,
+  "lr": 0.001,
+  "heads": {
+    "size": 2,
+    "color": 4,
+    "length": 4,
+    "digit_0": 11,
+    "digit_1": 11,
+    "digit_2": 11,
+    "digit_3": 11
+  },
+  "best_val_exact_structured_accuracy": 0.09,
+  "test_exact_structured_accuracy": 0.04,
+  "test_head_accuracy": {
+    "size": 0.47,
+    "color": 0.82,
+    "length": 0.97,
+    "digit_0": 0.6,
+    "digit_1": 0.51,
+    "digit_2": 0.64,
+    "digit_3": 0.88
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 11.184926300048827,
+      "val_loss": 15.559351682662964,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.26,
+        "length": 0.29,
+        "digit_0": 0.12,
+        "digit_1": 0.29,
+        "digit_2": 0.48,
+        "digit_3": 0.8
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 8.60518674850464,
+      "val_loss": 17.5579195022583,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.4,
+        "color": 0.88,
+        "length": 0.3,
+        "digit_0": 0.13,
+        "digit_1": 0.31,
+        "digit_2": 0.48,
+        "digit_3": 0.8
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 7.730732440948486,
+      "val_loss": 7.0380425453186035,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.43,
+        "color": 1.0,
+        "length": 0.94,
+        "digit_0": 0.13,
+        "digit_1": 0.33,
+        "digit_2": 0.54,
+        "digit_3": 0.8
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 7.188138408660889,
+      "val_loss": 7.4549949169158936,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.51,
+        "color": 1.0,
+        "length": 0.84,
+        "digit_0": 0.11,
+        "digit_1": 0.36,
+        "digit_2": 0.51,
+        "digit_3": 0.79
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 6.936255950927734,
+      "val_loss": 7.131273508071899,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.38,
+        "color": 1.0,
+        "length": 0.92,
+        "digit_0": 0.1,
+        "digit_1": 0.36,
+        "digit_2": 0.53,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 6.861081943511963,
+      "val_loss": 6.659733414649963,
+      "val_exact_structured_accuracy": 0.03,
+      "val_head_accuracy": {
+        "size": 0.43,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.15,
+        "digit_1": 0.35,
+        "digit_2": 0.56,
+        "digit_3": 0.83
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 6.68095287322998,
+      "val_loss": 6.537734270095825,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.41,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.1,
+        "digit_1": 0.38,
+        "digit_2": 0.57,
+        "digit_3": 0.83
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 6.614276866912842,
+      "val_loss": 6.600993633270264,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.51,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.12,
+        "digit_1": 0.36,
+        "digit_2": 0.59,
+        "digit_3": 0.82
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 6.538825931549073,
+      "val_loss": 6.409179091453552,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.49,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.1,
+        "digit_1": 0.4,
+        "digit_2": 0.56,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 6.474667568206787,
+      "val_loss": 6.43519914150238,
+      "val_exact_structured_accuracy": 0.06,
+      "val_head_accuracy": {
+        "size": 0.41,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.15,
+        "digit_1": 0.39,
+        "digit_2": 0.55,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 6.446458969116211,
+      "val_loss": 8.854499101638794,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.95,
+        "length": 0.5,
+        "digit_0": 0.11,
+        "digit_1": 0.37,
+        "digit_2": 0.43,
+        "digit_3": 0.79
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 6.359745254516602,
+      "val_loss": 6.391252636909485,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.52,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.16,
+        "digit_1": 0.38,
+        "digit_2": 0.55,
+        "digit_3": 0.84
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 6.260950450897217,
+      "val_loss": 7.0824397802352905,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.44,
+        "color": 0.89,
+        "length": 0.89,
+        "digit_0": 0.14,
+        "digit_1": 0.38,
+        "digit_2": 0.58,
+        "digit_3": 0.87
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 6.039682292938233,
+      "val_loss": 10.235989093780518,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.67,
+        "length": 0.44,
+        "digit_0": 0.11,
+        "digit_1": 0.33,
+        "digit_2": 0.35,
+        "digit_3": 0.76
+      }
+    },
+    {
+      "epoch": 15,
+      "train_loss": 5.964398384094238,
+      "val_loss": 13.35881519317627,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.52,
+        "color": 0.94,
+        "length": 0.27,
+        "digit_0": 0.09,
+        "digit_1": 0.17,
+        "digit_2": 0.34,
+        "digit_3": 0.55
+      }
+    },
+    {
+      "epoch": 16,
+      "train_loss": 5.722353858947754,
+      "val_loss": 23.600572109222412,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.51,
+        "color": 0.52,
+        "length": 0.2,
+        "digit_0": 0.13,
+        "digit_1": 0.12,
+        "digit_2": 0.04,
+        "digit_3": 0.48
+      }
+    },
+    {
+      "epoch": 17,
+      "train_loss": 5.46616340637207,
+      "val_loss": 6.000516176223755,
+      "val_exact_structured_accuracy": 0.03,
+      "val_head_accuracy": {
+        "size": 0.56,
+        "color": 0.98,
+        "length": 0.99,
+        "digit_0": 0.18,
+        "digit_1": 0.44,
+        "digit_2": 0.59,
+        "digit_3": 0.82
+      }
+    },
+    {
+      "epoch": 18,
+      "train_loss": 5.327601318359375,
+      "val_loss": 5.423353552818298,
+      "val_exact_structured_accuracy": 0.04,
+      "val_head_accuracy": {
+        "size": 0.42,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.37,
+        "digit_1": 0.46,
+        "digit_2": 0.57,
+        "digit_3": 0.85
+      }
+    },
+    {
+      "epoch": 19,
+      "train_loss": 5.2339568519592286,
+      "val_loss": 12.932230710983276,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.56,
+        "color": 0.82,
+        "length": 0.38,
+        "digit_0": 0.1,
+        "digit_1": 0.14,
+        "digit_2": 0.31,
+        "digit_3": 0.8
+      }
+    },
+    {
+      "epoch": 20,
+      "train_loss": 5.145862197875976,
+      "val_loss": 22.47243022918701,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.47,
+        "color": 0.4,
+        "length": 0.2,
+        "digit_0": 0.07,
+        "digit_1": 0.16,
+        "digit_2": 0.14,
+        "digit_3": 0.56
+      }
+    },
+    {
+      "epoch": 21,
+      "train_loss": 5.01820387840271,
+      "val_loss": 7.7051427364349365,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.58,
+        "color": 1.0,
+        "length": 0.92,
+        "digit_0": 0.11,
+        "digit_1": 0.45,
+        "digit_2": 0.54,
+        "digit_3": 0.84
+      }
+    },
+    {
+      "epoch": 22,
+      "train_loss": 4.941311340332032,
+      "val_loss": 11.635193347930908,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.54,
+        "color": 0.54,
+        "length": 0.75,
+        "digit_0": 0.07,
+        "digit_1": 0.36,
+        "digit_2": 0.41,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 23,
+      "train_loss": 4.729859857559204,
+      "val_loss": 9.982396125793457,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.4,
+        "color": 0.89,
+        "length": 0.98,
+        "digit_0": 0.12,
+        "digit_1": 0.46,
+        "digit_2": 0.56,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 24,
+      "train_loss": 4.669421129226684,
+      "val_loss": 5.0158538818359375,
+      "val_exact_structured_accuracy": 0.05,
+      "val_head_accuracy": {
+        "size": 0.49,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.34,
+        "digit_1": 0.5,
+        "digit_2": 0.59,
+        "digit_3": 0.87
+      }
+    },
+    {
+      "epoch": 25,
+      "train_loss": 4.508724365234375,
+      "val_loss": 4.8784507513046265,
+      "val_exact_structured_accuracy": 0.07,
+      "val_head_accuracy": {
+        "size": 0.47,
+        "color": 1.0,
+        "length": 1.0,
+        "digit_0": 0.44,
+        "digit_1": 0.52,
+        "digit_2": 0.63,
+        "digit_3": 0.87
+      }
+    },
+    {
+      "epoch": 26,
+      "train_loss": 4.434863023757934,
+      "val_loss": 16.079657793045044,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.67,
+        "length": 0.58,
+        "digit_0": 0.12,
+        "digit_1": 0.36,
+        "digit_2": 0.24,
+        "digit_3": 0.74
+      }
+    },
+    {
+      "epoch": 27,
+      "train_loss": 4.300007600784301,
+      "val_loss": 32.817091941833496,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.41,
+        "color": 0.45,
+        "length": 0.36,
+        "digit_0": 0.07,
+        "digit_1": 0.13,
+        "digit_2": 0.1,
+        "digit_3": 0.77
+      }
+    },
+    {
+      "epoch": 28,
+      "train_loss": 4.2038931465148925,
+      "val_loss": 18.867244720458984,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.48,
+        "color": 0.76,
+        "length": 0.68,
+        "digit_0": 0.1,
+        "digit_1": 0.44,
+        "digit_2": 0.38,
+        "digit_3": 0.78
+      }
+    },
+    {
+      "epoch": 29,
+      "train_loss": 4.02919132232666,
+      "val_loss": 9.063663959503174,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.44,
+        "color": 0.99,
+        "length": 0.93,
+        "digit_0": 0.12,
+        "digit_1": 0.51,
+        "digit_2": 0.56,
+        "digit_3": 0.85
+      }
+    },
+    {
+      "epoch": 30,
+      "train_loss": 3.931476898193359,
+      "val_loss": 45.1426305770874,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.35,
+        "length": 0.35,
+        "digit_0": 0.06,
+        "digit_1": 0.09,
+        "digit_2": 0.07,
+        "digit_3": 0.82
+      }
+    },
+    {
+      "epoch": 31,
+      "train_loss": 3.8085168552398683,
+      "val_loss": 5.2846397161483765,
+      "val_exact_structured_accuracy": 0.09,
+      "val_head_accuracy": {
+        "size": 0.49,
+        "color": 0.84,
+        "length": 0.99,
+        "digit_0": 0.69,
+        "digit_1": 0.43,
+        "digit_2": 0.61,
+        "digit_3": 0.89
+      }
+    },
+    {
+      "epoch": 32,
+      "train_loss": 3.669427099227905,
+      "val_loss": 14.493051767349243,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.43,
+        "color": 0.67,
+        "length": 0.58,
+        "digit_0": 0.19,
+        "digit_1": 0.23,
+        "digit_2": 0.24,
+        "digit_3": 0.83
+      }
+    },
+    {
+      "epoch": 33,
+      "train_loss": 3.6516728591918945,
+      "val_loss": 31.240225315093994,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.46,
+        "color": 0.62,
+        "length": 0.22,
+        "digit_0": 0.08,
+        "digit_1": 0.15,
+        "digit_2": 0.14,
+        "digit_3": 0.67
+      }
+    },
+    {
+      "epoch": 34,
+      "train_loss": 3.5986318588256836,
+      "val_loss": 42.34608173370361,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.51,
+        "color": 0.38,
+        "length": 0.3,
+        "digit_0": 0.12,
+        "digit_1": 0.22,
+        "digit_2": 0.06,
+        "digit_3": 0.76
+      }
+    },
+    {
+      "epoch": 35,
+      "train_loss": 3.4584732818603516,
+      "val_loss": 6.4680352210998535,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.42,
+        "color": 0.99,
+        "length": 0.99,
+        "digit_0": 0.26,
+        "digit_1": 0.54,
+        "digit_2": 0.62,
+        "digit_3": 0.85
+      }
+    },
+    {
+      "epoch": 36,
+      "train_loss": 3.308334264755249,
+      "val_loss": 6.85579788684845,
+      "val_exact_structured_accuracy": 0.02,
+      "val_head_accuracy": {
+        "size": 0.42,
+        "color": 0.81,
+        "length": 1.0,
+        "digit_0": 0.47,
+        "digit_1": 0.45,
+        "digit_2": 0.61,
+        "digit_3": 0.86
+      }
+    },
+    {
+      "epoch": 37,
+      "train_loss": 3.194768981933594,
+      "val_loss": 10.739124774932861,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.43,
+        "color": 0.89,
+        "length": 0.93,
+        "digit_0": 0.1,
+        "digit_1": 0.59,
+        "digit_2": 0.57,
+        "digit_3": 0.86
+      }
+    },
+    {
+      "epoch": 38,
+      "train_loss": 3.152298021316528,
+      "val_loss": 19.228099584579468,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.55,
+        "color": 0.94,
+        "length": 0.78,
+        "digit_0": 0.12,
+        "digit_1": 0.15,
+        "digit_2": 0.59,
+        "digit_3": 0.91
+      }
+    },
+    {
+      "epoch": 39,
+      "train_loss": 3.1626562595367433,
+      "val_loss": 12.131994485855103,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.45,
+        "color": 0.8,
+        "length": 0.97,
+        "digit_0": 0.15,
+        "digit_1": 0.42,
+        "digit_2": 0.55,
+        "digit_3": 0.83
+      }
+    },
+    {
+      "epoch": 40,
+      "train_loss": 3.0450775527954104,
+      "val_loss": 5.863022089004517,
+      "val_exact_structured_accuracy": 0.06,
+      "val_head_accuracy": {
+        "size": 0.55,
+        "color": 0.9,
+        "length": 0.98,
+        "digit_0": 0.39,
+        "digit_1": 0.5,
+        "digit_2": 0.7,
+        "digit_3": 0.86
+      }
+    },
+    {
+      "epoch": 41,
+      "train_loss": 2.951062355041504,
+      "val_loss": 10.05552625656128,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.47,
+        "color": 0.75,
+        "length": 0.75,
+        "digit_0": 0.42,
+        "digit_1": 0.57,
+        "digit_2": 0.36,
+        "digit_3": 0.84
+      }
+    },
+    {
+      "epoch": 42,
+      "train_loss": 2.6654079866409304,
+      "val_loss": 10.057256579399109,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.54,
+        "color": 0.76,
+        "length": 1.0,
+        "digit_0": 0.18,
+        "digit_1": 0.42,
+        "digit_2": 0.63,
+        "digit_3": 0.87
+      }
+    },
+    {
+      "epoch": 43,
+      "train_loss": 2.7571100854873656,
+      "val_loss": 50.55924701690674,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.56,
+        "color": 0.46,
+        "length": 0.51,
+        "digit_0": 0.1,
+        "digit_1": 0.17,
+        "digit_2": 0.09,
+        "digit_3": 0.81
+      }
+    },
+    {
+      "epoch": 44,
+      "train_loss": 2.782366213798523,
+      "val_loss": 17.477829933166504,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.4,
+        "color": 0.72,
+        "length": 0.6,
+        "digit_0": 0.15,
+        "digit_1": 0.35,
+        "digit_2": 0.22,
+        "digit_3": 0.88
+      }
+    },
+    {
+      "epoch": 45,
+      "train_loss": 2.5345808124542235,
+      "val_loss": 20.510643005371094,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.44,
+        "color": 0.65,
+        "length": 0.49,
+        "digit_0": 0.11,
+        "digit_1": 0.46,
+        "digit_2": 0.26,
+        "digit_3": 0.79
+      }
+    },
+    {
+      "epoch": 46,
+      "train_loss": 2.5699098777770994,
+      "val_loss": 73.93337631225586,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.42,
+        "color": 0.4,
+        "length": 0.27,
+        "digit_0": 0.13,
+        "digit_1": 0.08,
+        "digit_2": 0.02,
+        "digit_3": 0.56
+      }
+    },
+    {
+      "epoch": 47,
+      "train_loss": 2.3939545345306397,
+      "val_loss": 12.288519382476807,
+      "val_exact_structured_accuracy": 0.03,
+      "val_head_accuracy": {
+        "size": 0.45,
+        "color": 0.98,
+        "length": 0.92,
+        "digit_0": 0.14,
+        "digit_1": 0.56,
+        "digit_2": 0.64,
+        "digit_3": 0.86
+      }
+    },
+    {
+      "epoch": 48,
+      "train_loss": 2.2802836656570435,
+      "val_loss": 25.570107460021973,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.44,
+        "color": 0.31,
+        "length": 0.57,
+        "digit_0": 0.22,
+        "digit_1": 0.1,
+        "digit_2": 0.19,
+        "digit_3": 0.86
+      }
+    },
+    {
+      "epoch": 49,
+      "train_loss": 2.360525493621826,
+      "val_loss": 173.89146423339844,
+      "val_exact_structured_accuracy": 0.0,
+      "val_head_accuracy": {
+        "size": 0.57,
+        "color": 0.21,
+        "length": 0.2,
+        "digit_0": 0.07,
+        "digit_1": 0.07,
+        "digit_2": 0.01,
+        "digit_3": 0.12
+      }
+    },
+    {
+      "epoch": 50,
+      "train_loss": 2.2510885858535765,
+      "val_loss": 7.7535480260849,
+      "val_exact_structured_accuracy": 0.01,
+      "val_head_accuracy": {
+        "size": 0.52,
+        "color": 0.94,
+        "length": 0.93,
+        "digit_0": 0.27,
+        "digit_1": 0.52,
+        "digit_2": 0.57,
+        "digit_3": 0.86
+      }
+    }
+  ]
+}
