@@ -1,8 +1,9 @@
+# Runtime dependencies for the Streamlit demo (app.py).
+# The extra index serves CPU-only PyTorch wheels on Linux (Streamlit Community Cloud),
+# which keeps the deploy small; on macOS/Windows pip uses the normal wheels.
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.11.0
 torchvision==0.26.0
 pillow==12.2.0
 numpy==2.4.4
-streamlit==1.41.1
-
-# Only required to train the Embedding CNN model
-sentence-transformers==5.4.1
+streamlit==1.65.0

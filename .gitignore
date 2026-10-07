@@ -1,13 +1,15 @@
 # macOS
 .DS_Store
 
-# generated datasets and previews
-data/processed
+# generated datasets: train/val images are ignored; metadata and test images are
+# committed because the demo app samples test images and rebuilds the CNN-LSTM
+# vocabulary from the metadata. Regenerate everything with src/data/generate_*.py.
+data/processed/*/images/train/
+data/processed/*/images/val/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
-data/processed/
 data/previews/
 artifacts/
 *.pth

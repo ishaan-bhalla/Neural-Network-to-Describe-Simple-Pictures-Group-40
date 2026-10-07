@@ -26,9 +26,11 @@ from src.inference.lstm_inference import build_vocab, load_model as load_lstm, p
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # ── Sentence accuracy on test set (from Evaluation/metrics_*.json) ──────────
+# These describe the weights in artifacts/ (see artifacts/*/multihead_cnn/metrics.json).
+# The best shapes run reported in Evaluation/ (25%) used different weights.
 PERF = {
     "tictactoe": {"MultiHead CNN": "96.7%", "CNN-LSTM": "—"},
-    "shapes":    {"MultiHead CNN": "25.0%", "CNN-LSTM": "0%"},
+    "shapes":    {"MultiHead CNN": "7.0%",  "CNN-LSTM": "0%"},
     "numbers":   {"MultiHead CNN": "4.0%",  "CNN-LSTM": "—"},
 }
 
@@ -109,11 +111,11 @@ with st.sidebar:
 | Task | MultiHead CNN | GPT-3.5 |
 |---|---|---|
 | TicTacToe | **96.7%** | 82% |
-| Shapes | 25% | 48% |
+| Shapes | 25%* | 48% |
 | Numbers | 4% | 72% |
 """
         )
-        st.caption("MultiHead CNN beats GPT-3.5 on TicTacToe.")
+        st.caption("MultiHead CNN beats GPT-3.5 on TicTacToe. *Best shapes training run; the shapes model deployed here scores 7%.")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
@@ -146,7 +148,7 @@ with col_left:
         )
         if uploaded:
             selected_image = Image.open(uploaded).convert("RGB")
-            st.image(selected_image, use_container_width=True)
+            st.image(selected_image, width="stretch")
 
     else:
         rows = load_test_rows(task)
@@ -172,7 +174,7 @@ with col_left:
             if img_path.exists():
                 selected_image = Image.open(img_path).convert("RGB")
                 true_caption = row["caption"]
-                st.image(selected_image, use_container_width=True)
+                st.image(selected_image, width="stretch")
                 st.caption(f"ID: `{row['id']}`")
             else:
                 st.error(f"Image file not found: `{img_path}`")
