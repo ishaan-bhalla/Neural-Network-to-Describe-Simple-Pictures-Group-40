@@ -1,0 +1,26 @@
+{
+  "samples": 300,
+  "occupied_cell_count_distribution": {
+    "1": 0,
+    "2": 57,
+    "3": 62,
+    "4": 50,
+    "5": 60,
+    "6": 71
+  },
+  "board_position_frequency": {
+    "top left": 138,
+    "top middle": 141,
+    "top right": 137,
+    "middle left": 137,
+    "center": 139,
+    "middle right": 137,
+    "bottom left": 142,
+    "bottom middle": 139,
+    "bottom right": 116
+  },
+  "symbol_frequency": {
+    "X": 674,
+    "O": 552
+  }
+}

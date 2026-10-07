@@ -132,7 +132,8 @@ Relation prediction is the bottleneck at 50% (chance for 4 classes).
 ```bash
 git clone https://github.com/ishaan-bhalla/Neural-Network-to-Describe-Simple-Pictures-Group-40.git
 cd Neural-Network-to-Describe-Simple-Pictures-Group-40
-pip install -r requirements.txt
+pip install -r requirements.txt        # demo app only
+pip install -r requirements-train.txt  # adds what training needs
 ```
 
 ### Generate datasets

@@ -1,0 +1,5 @@
+# Everything in requirements.txt plus what training needs.
+-r requirements.txt
+
+# Only required to train the Embedding CNN model
+sentence-transformers==5.4.1
