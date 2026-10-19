@@ -105,23 +105,23 @@ with st.sidebar:
         "Use **Random test sample** for reliable results."
     )
 
-    with st.expander("GPT-3.5 comparison"):
+    with st.expander("Vision-LLM baseline (TicTacToe)"):
         st.markdown(
             """
-| Task | MultiHead CNN | GPT-3.5 |
+| Model | Sentence accuracy | Cell accuracy |
 |---|---|---|
-| TicTacToe | **96.7%** | 82% |
-| Shapes | 25%* | 48% |
-| Numbers | 4% | 72% |
+| MultiHead CNN (this app) | **96.7%** (29/30) | **99.3%** |
+| Qwen3-VL 32B, zero-shot | 96.7% (29/30) | 98.5% |
 """
         )
-        st.caption("MultiHead CNN beats GPT-3.5 on TicTacToe. *Best shapes training run; the shapes model deployed here scores 7%.")
+        st.caption("Same 30-board test set. A small task-specific CNN matches a 32B vision-language model. "
+                   "Shapes: the deployed model scores 7% (best training run 25%).")
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 st.title("🖼️ Image Caption Generator")
 st.caption(
-    "Group 40 · ITAI Coursework — MultiHead CNN vs CNN-LSTM on synthetic image datasets"
+    "MSc group project (Group 40) · MultiHead CNN vs CNN-LSTM on synthetic image datasets"
 )
 
 col_left, col_right = st.columns([1, 1], gap="large")
