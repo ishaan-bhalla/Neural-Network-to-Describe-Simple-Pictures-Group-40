@@ -59,6 +59,10 @@ All images are generated with PIL from a fixed random seed, so every result is r
 
 **MultiHead CNN (structured prediction).** Image → 4-block CNN → 512-dimensional feature → one classification head per attribute (9 for tic-tac-toe, 7 for Shapes and Numbers). The loss is the sum of the heads' cross-entropies, and the caption is rebuilt from the template. It keeps a 4×4 spatial grid (`AdaptiveAvgPool2d(4)`) instead of pooling to a single vector, so the heads can still tell where things are.
 
+[![Architecture diagram of ishaan-bhalla/neural-network-to-describe-simple-pictures-group-40](https://gitdiagram.com/ishaan-bhalla/neural-network-to-describe-simple-pictures-group-40/diagram.png)](https://gitdiagram.com/ishaan-bhalla/neural-network-to-describe-simple-pictures-group-40?utm_source=readme&utm_medium=picture)
+
+*Architecture diagram (GitDiagram; click to explore it interactively).*
+
 ## 4. Results
 
 **Exact-caption (sentence) accuracy on the test set**
@@ -126,8 +130,6 @@ python -m src.training.train_embedding_model --dataset-name shapes
 # Run the demo
 streamlit run app.py
 ```
-
-**Repository layout:** `src/data/` (generators and dataset classes), `src/models/`, `src/training/`, `src/inference/` (used by the demo), `artifacts/` (trained weights and metrics), `Evaluation/` (evaluation script and results), `app.py` (Streamlit demo).
 
 ## 8. Team and my contribution
 
