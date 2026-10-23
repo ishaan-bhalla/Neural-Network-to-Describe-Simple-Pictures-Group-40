@@ -16,8 +16,9 @@
 
 ## Key results
 
-- **Tic-tac-toe: 96.67% exact captions (29 of 30 test boards)** and 99.26% of individual cells correct, with a 2.5M-parameter CNN that predicts each cell separately.
-- **That matches a 32B vision-language model.** Qwen3-VL 32B, run zero-shot on the same 30 boards, also scored 29/30 (98.52% of cells), with about 13,000 times as many parameters.
+- **Tic-tac-toe: 98.9% exact captions on 1,000 unseen boards** (95% CI 98.0-99.4%) and 99.89% of individual cells correct, with a 2.5M-parameter CNN that predicts each cell separately. On the original 30-board test split it scored 96.67% (29/30).
+- **It matches or beats a 32B vision-language model, about 47,000 times faster.** On the original 30 boards both models scored 29/30. On 100 new boards the CNN got 100/100 and Qwen3-VL 32B (zero-shot, local) 94/100. The CNN takes 1.3 ms per board on a laptop CPU; Qwen3-VL takes about 59 s per board on the laptop GPU.
+- **It knows when it is unsure.** If the CNN abstains when any cell's confidence is below 0.8, it answers 85.8% of the 1,000 test boards and gets every one of them right.
 - **Caption structure decides difficulty.** The same multi-head design reaches only 25% on Shapes and 4% on Numbers, where one wrong attribute out of seven makes the whole caption wrong. On Shapes, a retrieval model (37%) beats it.
 
 ## Contents
@@ -80,7 +81,57 @@ All images are generated with PIL from a fixed random seed, so every result is r
 | MultiHead CNN (ours, 2.5M parameters) | **29/30 (96.67%)** | **99.26%** (268/270) |
 | Qwen3-VL 32B, zero-shot | 29/30 (96.67%) | 98.52% (266/270) |
 
-With one miss each on 30 boards, this is a tie, not a win.
+With one miss each on 30 boards, this is a tie, not a win. The larger evaluation below separates them.
+
+### Larger held-out evaluation (1,000 boards)
+
+Run on 2026-10-23 with the committed weights the demo serves (no retraining). Scripts and raw results are in [`Evaluation/`](Evaluation/).
+
+**Test set.** `Evaluation/make_tictactoe_heldout.py` uses the project's generator and renderer with a new seed (2026) to draw 1,500 distinct boards. None of them has the same cell layout as any of the 300 original boards (train, val or test), and the script checks this. They are shuffled into a 500-board validation split, used only to choose the abstention threshold, and a 1,000-board test split. Because 2-mark layouts are few and most are already in the original data, the new set has more crowded boards than the original (test: 20 boards with 2 marks, 121 with 3, 261 with 4, 302 with 5, 296 with 6). Of the original 30 test boards, 6 have a layout that also appears in training.
+
+**Accuracy (MultiHead CNN).** Sentence accuracy CIs are Wilson 95%; cell accuracy CIs are a 95% bootstrap over boards (cells on one board are not independent).
+
+| Test set | Boards | Exact captions | 95% CI | Cells correct | 95% CI |
+|---|---|---|---|---|---|
+| Original test split | 30 | 29 (96.67%) | 83.3-99.4% | 268/270 (99.26%) | 97.8-100% |
+| New held-out test | 1,000 | **989 (98.9%)** | 98.0-99.4% | **8,989/9,000 (99.89%)** | 99.80-99.94% |
+
+**Abstention ("I don't know").** Confidence is the lowest top-class softmax probability across the 9 cell heads. The CNN answers only when that is at or above a threshold.
+
+| Threshold | Answered (test) | Accuracy on answered | Wrong boards caught |
+|---|---|---|---|
+| none | 1,000 (100%) | 98.9% | 0 of 11 |
+| 0.6 | 980 (98.0%) | 99.49% (975/980) | 6 of 11 |
+| 0.7 | 933 (93.3%) | 99.68% (930/933) | 8 of 11 |
+| 0.8 | 858 (85.8%) | 100% (858/858) | 11 of 11 |
+| 0.9 | 644 (64.4%) | 100% (644/644) | 11 of 11 |
+| 0.95 | 369 (36.9%) | 100% (369/369) | 11 of 11 |
+
+Thresholds were picked on the validation split, not the test split. The rule set beforehand was "the lowest threshold with no errors on validation", which gives 0.95 and keeps only 36.9% of test boards. A second rule, "the lowest threshold with at least 99.5% accuracy on validation", gives 0.6 (98.0% answered, 99.49% correct); it was added after seeing the first. The 0.8 row is the best trade-off on the test set, but validation still had one error there (434/435), so it is not a validation-chosen setting. The model is under-confident: almost no board has every cell above 0.99.
+
+**Speed and size against Qwen3-VL 32B.** Same prompt and settings as the 30-board baseline (JSON output, temperature 0, thinking off). Qwen3-VL was run on the first 100 boards of the shuffled test split (a random sample); the run was capped at 100 boards because each takes about a minute.
+
+| | MultiHead CNN | Qwen3-VL 32B (Ollama, Q4_K_M) |
+|---|---|---|
+| Exact captions, same 100 boards | **100/100** (Wilson 95% CI 96.3-100%) | 94/100 (87.5-97.2%) |
+| Cells correct, same 100 boards | **100%** | 97.67% |
+| Latency per board, p50 / p95 | **1.26 ms / 1.41 ms** (CPU, batch 1, n = 1,000) | 59.2 s / 113.1 s (Apple GPU, n = 100) |
+| Parameters | 2.5M (2,500,891) | 33.4B (13,355x) |
+| Model file | 10.0 MB | 20.9 GB (2,086x) |
+
+On those 100 boards Qwen3-VL missed 6 that the CNN got right, and the CNN missed none that Qwen3-VL got right (exact McNemar test, p = 0.031). The CNN time is end to end (read the PNG, resize, forward pass, softmax) after 50 warm-up images; the forward pass alone is 0.82 ms p50. The Qwen3-VL time is one API call with the model already loaded, after one untimed warm-up call. Qwen3-VL's time varies with how many tokens it emits (mean 327 for a short JSON answer); its slowest board took 234 s. Machine: Apple M3 Pro, 36 GB RAM, macOS, PyTorch 2.12.1 (6 CPU threads). The CNN was timed with Ollama idle; the Qwen3-VL run shared the machine with some idle Docker containers (1-minute load average 0.3-5.0), so its times may be slightly high.
+
+**Fallback cascade.** Boards below a confidence threshold go to Qwen3-VL; the rest keep the CNN's answer. On the 100-board sample:
+
+| Threshold | Sent to Qwen3-VL | Exact captions | Mean latency per board |
+|---|---|---|---|
+| no cascade (CNN only) | 0% | 100/100 | 1.3 ms |
+| 0.6 | 2% | 100/100 | 1.4 s |
+| 0.7 | 4% | 100/100 | 2.9 s |
+| 0.8 | 11% | 99/100 | 9.2 s |
+| 0.95 | 60% | 96/100 | 41.9 s |
+
+Because the CNN is more accurate than Qwen3-VL here, sending boards to the bigger model adds latency without adding accuracy; on this sample it only loses captions. The full 1,000-board cascade could not be scored, because Qwen3-VL answered only 2 of the 20 boards the 0.6 threshold would route (on all 1,000, a 0.6 cascade would land between 97.5% and 99.5%). For this task, abstaining is the better use of the confidence score than escalating.
 
 **Per-attribute accuracy, MultiHead CNN**
 
@@ -99,7 +150,7 @@ With one miss each on 30 boards, this is a tie, not a win.
 - **When the caption is really a set of slots, predict the slots.** Tic-tac-toe has nine independent cells and no grammar, and the multi-head model is near-perfect there.
 - **Exact-match accuracy punishes long templates.** On Shapes, each attribute is right 50-83% of the time, but all seven are right together only 25% of the time. Per-attribute accuracy is the fairer measure there.
 - **Relations are the bottleneck.** "Above / below / left of / right of" is 50% on Shapes, against chance of 25%. The model has to compare two objects' positions, which independent heads don't do well.
-- **Small test sets.** Tic-tac-toe has 30 test images, so one error moves accuracy by 3.3 points. Treat 96.67% as "29 of 30", not as a precise rate.
+- **Small test sets.** The original tic-tac-toe split has 30 test images, so one error moves accuracy by 3.3 points, and 6 of the 30 share a layout with a training board. The 1,000-board held-out set above gives a tighter estimate (98.9%, 95% CI 98.0-99.4%).
 - **Synthetic data only.** The models have never seen real photographs and won't generalise to them.
 - **The CNN + LSTM wasn't pretrained.** It learns word order well but rarely gets a whole caption right on the larger datasets.
 
@@ -127,6 +178,12 @@ python -m src.training.train_multihead_cnn --dataset tictactoe --epochs 50
 python -m src.training.train_cnn_lstm --dataset shapes
 python -m src.training.train_embedding_model --dataset-name shapes
 
+# Larger tic-tac-toe evaluation (no retraining; the Qwen3-VL step needs Ollama with qwen3-vl:32b)
+python Evaluation/make_tictactoe_heldout.py
+python Evaluation/eval_multihead_tictactoe.py
+python Evaluation/qwen3vl_tictactoe.py --split test --ids first:100 --out Evaluation/qwen3vl_tictactoe_runs_$(date +%F).jsonl
+python Evaluation/cascade_tictactoe.py
+
 # Run the demo
 streamlit run app.py
 ```
@@ -141,3 +198,4 @@ An MSc group project at the University of Bristol by Group 40: Ishaan Bhalla, [F
 - **Data loading:** `get_metadata_files`, which loads either one metadata file (Shapes, Numbers) or three split files (tic-tac-toe) through the same interface.
 - **Inference and demo:** `src/inference/` and the Streamlit app, which I deployed to Streamlit Community Cloud.
 - **Vision-model baseline:** after the project, ran Qwen3-VL 32B on the tic-tac-toe test set to replace a cited GPT-3.5 figure with a measured comparison.
+- **Larger evaluation:** a 1,000-board held-out test set with confidence intervals, confidence-based abstention, latency against Qwen3-VL and a fallback cascade (`Evaluation/`).

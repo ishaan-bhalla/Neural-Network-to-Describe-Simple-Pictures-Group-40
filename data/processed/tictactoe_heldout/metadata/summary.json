@@ -1,0 +1,35 @@
+{
+  "seed": 2026,
+  "generator": "src/data/generate_tictactoe.py (random_board, render_board), 256x256, 2-6 marks",
+  "n_val": 500,
+  "n_test": 1000,
+  "draws": 2993,
+  "rejected": {
+    "in_original_dataset": 641,
+    "duplicate_in_heldout": 852
+  },
+  "overlap_check": {
+    "heldout_test_in_original_train": 0,
+    "heldout_test_in_original_any_split": 0,
+    "heldout_val_in_original_any_split": 0,
+    "heldout_val_test_shared_states": 0,
+    "duplicate_states_within_test": 0
+  },
+  "original_test_boards_whose_state_is_in_original_train": 6,
+  "occupied_cell_count_distribution": {
+    "val": {
+      "2": 10,
+      "3": 58,
+      "4": 130,
+      "5": 139,
+      "6": 163
+    },
+    "test": {
+      "2": 20,
+      "3": 121,
+      "4": 261,
+      "5": 302,
+      "6": 296
+    }
+  }
+}
